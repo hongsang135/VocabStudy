@@ -1,0 +1,37 @@
+STT,Thuật ngữ,Tên đầy đủ,Nghĩa tiếng Việt,Cấp độ,Ghi chú,LastDate,Interval,EF
+1,MML,Module Master Lead,Trưởng nhóm mô đun,2,,2026-03-15T14:12:39.737Z,120,2.50
+2,ME,Manufacturing Engineering,Kỹ sư sản xuất,2,,2026-03-15T14:13:05.305Z,120,2.50
+3,DPU,Defects Per Unit,Số lỗi trên mỗi đơn vị sản phẩm,3,,2026-03-15T13:33:43.714Z,1440,2.50
+4,LS,Launch Sign-off,Khởi chạy hàng loạt,2,,2026-03-15T14:13:35.658Z,120,2.50
+5,SAC,Supplier Action Center,Trung tâm đối ứng vấn đề linh kiện,2,,2026-03-15T13:35:33.743Z,120,2.50
+6,VPAC,VinFast Production Assurance Committee,Hội đồng đảm bảo chất lượng VinFast,2,,2026-03-15T13:35:44.261Z,120,2.50
+7,TQA,Testing Quality Assessment,Đánh giá chất lượng thử nghiệm,2,,2026-03-15T14:07:24.115Z,120,2.50
+8,PALS,Product Attribute Leadership Strategy,Chiến lược dẫn đầu thuộc tính sản phẩm,2,,2026-03-15T14:07:17.095Z,120,2.50
+9,SQ,Supplier Quality,Chất lượng linh kiện,2,,2026-03-15T14:11:21.260Z,120,2.50
+10,ATnV,Attribute Testing and Validation,Kiểm tra và xác thực thuộc tính,2,,2026-03-15T14:13:20.823Z,120,2.50
+11,CTnV,Component Testing and Validation,Kiểm tra và xác nhận linh kiện,2,,2026-03-15T13:35:11.518Z,120,2.50
+12,MG,Module Group,Nhóm Mô-đun,3,,2026-03-15T13:34:14.185Z,1440,2.50
+13,FRS,Final Review Standard,Tiêu chuẩn đánh giá cuối cùng,3,,2026-03-15T13:34:44.747Z,1440,2.50
+14,SOP,Start Of Production,Bắt đầu sản xuất hàng loạt,4,,2026-03-15T13:34:04.239Z,4320,2.50
+15,MIS,Month In Service,Tháng bảo hành,3,,2026-03-15T13:35:47.841Z,1440,2.50
+16,CTF,Customer Test Fleet,Tiêu chuẩn kiểm thử theo quan điểm KH,2,,2026-03-15T13:35:57.762Z,120,2.50
+17,ESC,Engineering Sign Off,Kỹ thuật phê duyệt,3,,2026-03-15T13:34:10.361Z,1440,2.50
+18,Qualified,Qualified,Đủ năng lực / Đủ điều kiện,2,,2026-03-15T14:12:02.502Z,120,2.50
+19,Competitor,Competitor,Đối thủ cạnh tranh,2,,2026-03-15T14:13:25.830Z,120,2.50
+20,Patient,Patient,Bệnh nhân,2,,2026-03-15T14:11:49.562Z,120,2.50
+21,Regulations,Regulations,Quy định / Quy tắc,2,,2026-03-15T14:13:11.160Z,120,2.50
+22,ICA,Interim Containment Action,Hành động ngăn chặn tạm thời,2,,2026-03-15T13:34:23.873Z,120,2.50
+23,PCA,Permanent Corrective Action,Hành động khắc phục vĩnh viễn,2,,2026-03-15T14:11:33.602Z,120,2.50
+24,DCR,Design Change Request,Yêu cầu thay đổi thiết kế,2,,2026-03-15T14:13:59.228Z,120,2.50
+25,Homologation,Homologation,Đăng kiểm / Phê duyệt kiểu loại,2,,2026-03-15T14:13:46.992Z,120,2.50
+26,VCA,Vehicle Certification Agency,Cơ quan chứng nhận phương tiện,2,,2026-03-15T14:13:43.350Z,120,2.50
+27,Brake,Brake,Phanh (Thắng),2,Bao gồm Disc Brake và Drum Brake,2026-03-15T13:33:59.089Z,120,2.50
+28,Horn,Horn,Còi xe,2,,2026-03-15T14:07:26.796Z,120,2.50
+29,Side Stand,Side Stand,Chân chống cạnh / Chân chống nghiêng,2,,2026-03-15T14:12:46.722Z,120,2.50
+30,Scratch,Scratch,Vết xước (Lỗi ngoại quan),2,,2026-03-15T13:35:50.971Z,120,2.50
+31,Peeling,Peeling,Bong tróc (Lỗi ngoại quan),2,,2026-03-15T14:12:52.772Z,120,2.50
+32,Dent,Dent,Vết lõm / Vết móp (Lỗi ngoại quan),2,,2026-03-15T14:12:43.218Z,120,2.50
+33,Critical,Critical,Nghiêm trọng / Chí mạng (Mức độ lỗi),2,,2026-03-15T13:35:22.883Z,120,2.50
+34,Machinery,Machinery,Máy móc / Hệ thống máy móc,2,,2026-03-15T14:11:59.162Z,120,2.50
+35,Matter,Matter,Vật chất / Vấn đề,2,Lưu ý cụm "Foreign matter",2026-03-15T13:35:28.485Z,120,2.50
+36,Appreciated,Appreciated,Được trân trọng / Được đánh giá cao,2,Quá khứ của Appreciate,2026-03-15T14:13:31.570Z,120,2.50
