@@ -1,75 +1,47 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocab Learner</title>
+    <title>Mochi Vocab Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <nav class="nav">
+            <button onclick="switchTab('quiz')" id="nav-quiz" class="active">Học tập</button>
+            <button onclick="switchTab('data')" id="nav-data">Dữ liệu</button>
+        </nav>
 
-    <div class="app-container">
-        <div class="header">
-            <h1>English Learning</h1>
-        </div>
-
-        <div class="nav">
-            <button id="nav-quiz" class="active" onclick="switchTab('quiz')">Học tập</button>
-            <button id="nav-data" onclick="switchTab('data')">Dữ liệu CSV</button>
-        </div>
-
-        <div class="content">
-            <div id="section-quiz" class="section active">
-                <div class="quiz-box">
-                    <div id="quiz-ui">
-                        <div class="question-meta" id="q-meta">Đang tải dữ liệu...</div>
-                        <div class="question-text" id="q-text">Đang tải câu hỏi...</div>
-                        <div class="options-grid" id="q-options"></div>
-                        <div id="feedback"></div>
-                        <button id="btn-next" onclick="generateQuestion()" style="margin-top: 20px; display: none;"
-                            class="btn-save">Câu tiếp theo</button>
-                    </div>
-                    <div id="empty-ui" style="display: none;">
-                        <p>Chưa có dữ liệu. Vui lòng vào tab Dữ liệu để nhập file CSV.</p>
-                    </div>
-                </div>
+        <section id="section-quiz" class="section active">
+            <div id="statsDisplay" class="stats-bar">L1: 0 | L2: 0 | L3: 0 | L4: 0 | L5: 0</div>
+            
+            <div id="quiz-ui">
+                <div id="q-meta" class="meta-info">Đang tải...</div>
+                <div id="q-text" class="question-text">Câu hỏi sẽ hiện ở đây</div>
+                <div id="q-options" class="options-grid"></div>
+                <div id="feedback" class="feedback"></div>
+                <button id="btn-next" onclick="generateQuestion()" style="display:none;" class="btn-main">Tiếp theo</button>
             </div>
 
-            <div id="section-data" class="section">
-                <h3>Thêm từ vựng mới</h3>
-                <div class="add-word-form">
-                    <div class="form-row">
-                        <input type="text" id="new-term" placeholder="Thuật ngữ (Ví dụ: SOP)">
-                        <input type="text" id="new-full" placeholder="Tên đầy đủ (Ví dụ: Start of Production)">
-                    </div>
-                    <div class="form-row">
-                        <input type="text" id="new-mean" placeholder="Nghĩa tiếng Việt">
-                        <input type="text" id="new-note" placeholder="Ghi chú (không bắt buộc)">
-                    </div>
-                    <button class="btn-save" onclick="addNewWord()" style="width: 100%;">Thêm vào danh sách</button>
-                </div>
-
-                <hr style="margin: 25px 0; border: 0; border-top: 1px solid #eee;">
-
-                <h3>Cấu hình dữ liệu CSV</h3>
-                <p style="font-size: 0.8rem; color: #666;">Dán nội dung từ file data.csv của bạn vào đây và nhấn Lưu.
-                </p>
-                <textarea id="csvTextArea"
-                    placeholder="STT,Thuật ngữ,Tên đầy đủ,Nghĩa tiếng Việt,Cấp độ,Ghi chú"></textarea>
-                <div class="btn-group">
-                    <button class="btn-save" onclick="importFromTextArea()">Lưu & Cập nhật hệ thống</button>
-                    <button class="btn-export" onclick="exportToCSV()">Xuất file CSV mới</button>
-                </div>
-                <div class="stats-bar" id="statsDisplay">
-                    Số từ đã tải: 0 | Level 0: 0 từ.
-                </div>
+            <div id="empty-ui" style="display:none;">
+                <p>Chưa có dữ liệu vựng. Vui lòng sang tab Dữ liệu để nhập.</p>
             </div>
-        </div>
+        </section>
+
+        <section id="section-data" class="section">
+            <h3>Quản lý dữ liệu (CSV)</h3>
+            <textarea id="csvTextArea" placeholder="STT,Thuật ngữ,Tên đầy đủ,Nghĩa tiếng Việt,Cấp độ,Ghi chú,LastDate,Interval,EF"></textarea>
+            
+            <div class="button-group">
+                <button onclick="importFromCSVText(document.getElementById('csvTextArea').value)" class="btn-sub">Lưu tại máy</button>
+                <button onclick="pushToCloudflare()" class="btn-cloud-push">☁️ Đồng bộ lên Cloud</button>
+                <button onclick="fetchFromCloudflare()" class="btn-cloud-fetch">📥 Tải từ Cloud</button>
+            </div>
+            
+            <p class="note">Mẹo: Luôn "Đồng bộ lên Cloud" sau khi học xong để không mất dữ liệu.</p>
+        </section>
     </div>
-
     <script src="script.js"></script>
 </body>
-
 </html>

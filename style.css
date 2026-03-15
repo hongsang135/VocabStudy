@@ -1,127 +1,121 @@
 :root {
-    --vin-blue: #0056b3;
-    --vin-gray: #343a40;
+    --primary: #4a90e2;
     --success: #28a745;
     --danger: #dc3545;
-    --light: #f8f9fa;
+    --bg: #f4f7f6;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #e9ecef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
     margin: 0;
-    padding: 20px;
     display: flex;
     justify-content: center;
 }
 
-.app-container {
-    background: white;
+.container {
     width: 100%;
-    max-width: 800px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
-
-.header {
-    background: var(--vin-blue);
-    color: white;
+    max-width: 500px;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
-    text-align: center;
 }
 
+/* Navigation */
 .nav {
     display: flex;
-    background: var(--vin-gray);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .nav button {
     flex: 1;
-    padding: 15px;
+    padding: 10px;
     border: none;
-    background: none;
-    color: white;
+    background: #eee;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.nav button:hover { background: rgba(255,255,255,0.1); }
-.nav button.active { background: var(--vin-blue); }
+.nav button.active {
+    background: var(--primary);
+    color: white;
+}
 
-.content { padding: 30px; }
+/* Quiz UI */
 .section { display: none; }
 .section.active { display: block; }
 
-/* Quiz Styles */
-.quiz-box { text-align: center; }
-.question-meta { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
-.question-text { font-size: 1.4rem; font-weight: bold; margin-bottom: 25px; color: #222; }
-.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-
-.option-btn {
-    padding: 15px;
-    background: var(--light);
-    border: 2px solid #dee2e6;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s;
-}
-
-.option-btn:hover { border-color: var(--vin-blue); background: #f0f7ff; }
-
-/* Feedback */
-#feedback { margin-top: 20px; font-weight: bold; padding: 15px; border-radius: 8px; display: none; }
-.correct { background: #d4edda; color: #155724; display: block !important; }
-.wrong { background: #f8d7da; color: #721c24; display: block !important; }
-
-/* Data Section */
-textarea { 
-    width: 100%; 
-    height: 250px; 
-    border-radius: 8px; 
-    border: 1px solid #ccc; 
-    padding: 15px; 
-    font-family: monospace; 
-    font-size: 0.9rem;
-    box-sizing: border-box;
-}
-
-.btn-group { margin-top: 15px; display: flex; gap: 10px; }
-.btn-save { background: var(--success); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-.btn-export { background: var(--vin-gray); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-
-.stats-bar { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9rem; color: #666; }
-
-@media (max-width: 600px) {
-    .options-grid { grid-template-columns: 1fr; }
-}
-
-/* Thêm đoạn này vào cuối file style.css */
-.add-word-form {
-    background: #f1f3f5;
-    padding: 20px;
-    border-radius: 10px;
+.stats-bar {
+    background: #333;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.form-row {
-    display: flex;
+.meta-info { color: #666; font-size: 0.8em; margin-bottom: 10px; }
+
+.question-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.options-grid {
+    display: grid;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
-.form-row input {
-    flex: 1;
+.option-btn {
+    padding: 15px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.option-btn:hover { border-color: var(--primary); background: #f0f7ff; }
+
+/* Feedback */
+.feedback { margin: 20px 0; font-weight: bold; height: 24px; }
+.feedback.correct { color: var(--success); }
+.feedback.wrong { color: var(--danger); }
+
+/* Buttons */
+.btn-main {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    font-family: monospace;
+    font-size: 12px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    box-sizing: border-box;
 }
 
-.form-row input:focus {
-    border-color: var(--vin-blue);
-    outline: none;
-}
+.btn-cloud-push { background: #6f42c1; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+.btn-cloud-fetch { background: #fd7e14; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+.btn-sub { background: #6c757d; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
