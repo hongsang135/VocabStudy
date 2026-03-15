@@ -20,8 +20,8 @@ export async function onRequest(context) {
         try {
             const { content, password } = await request.json();
             
-            // Thay '1234' bằng mật khẩu bạn muốn
-            if (password !== "1234") { 
+            // So khớp với mật khẩu bạn đã cài trong Environment Variables
+            if (password !== env.SYNC_PASSWORD) { 
                 return new Response("Sai mật khẩu", { status: 401 });
             }
 
@@ -30,7 +30,7 @@ export async function onRequest(context) {
                     .run();
             return new Response("Đã lưu thành công", { status: 200 });
         } catch (e) {
-            return new Response("Lỗi lưu DB: " + e.message, { status: 500 });
+            return new Response("Lỗi: " + e.message, { status: 500 });
         }
     }
 }
